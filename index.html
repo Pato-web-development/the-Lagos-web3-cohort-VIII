@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang = "en-us">
+    <head>
+        <meta charset = "utf-8">
+        <!-- creating a code to display countdown to cohort VIII -->
+        <title> countdown to cohort VIII </title>
+		<style = "text/css">
+		#countdown {margin-left:20%;
+    font-size: 3em;
+    font-weight: 100;
+    color: white;
+    width: 700px;
+	text-align: center;
+    color: white;
+	margin-right:20;}
+
+#countdown div {   display: inline-block;
+    min-width: 90px;
+    padding: 15px;
+    background: grey;
+    border-radius: 10px;
+    border: 2px solid #030d52;
+    margin: 15px;}
+
+#countdown div span { color: #ffffff;
+    display: block;
+    margin-top: 15px;
+    font-size: .35em;
+    font-weight: 400;}
+		</style>
+    </head>
+	
+<body style="text-align:center;background-image:url(web3image.jpg)">
+    <h1> Countdown timer to the web3Lagos event </h1>
+<div id="countdown"></div>
+
+<script type = "text/javascript">
+//javascript code for the countdown
+function cohortcountdown(){
+    future = Date.parse("jan 31, 2023");
+ now = new Date();
+ diff = future - now;
+
+ days = Math.floor(diff / (1000 * 60 * 60 * 24));
+ hours = Math.floor(diff / (1000 * 60 * 60));
+ mins = Math.floor(diff / (1000 * 60));
+ secs = Math.floor(diff / 1000);
+
+ d = days;
+ h = hours - days * 24;
+ m = mins - hours * 60;
+ s = secs - mins * 60;
+
+ document.getElementById("countdown")
+  .innerHTML =
+  '<div>' + d + '<span>Days</span></div>' +
+  '<div>' + h + '<span>Hours</span></div>' +
+  '<div>' + m + '<span>Minutes</span></div>' +
+  '<div>' + s + '<span>Seconds</span></div>';
+}
+setInterval('cohortcountdown()', 1000);
+
+</script>
+</p>
+</body>
+</html>
